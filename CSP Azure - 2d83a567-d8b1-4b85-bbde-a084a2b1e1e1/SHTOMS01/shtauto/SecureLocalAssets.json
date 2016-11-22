@@ -1,0 +1,44 @@
+{
+  "PSCredential": [
+    {
+      "Username": "adminjst@corp.systemhosting.dk",
+      "Password": null,
+      "Name": "adminjst",
+      "LastModified": "2016-06-07 09:50:11Z"
+    },
+    {
+      "Username": "exchange\\adminjst",
+      "Password": null,
+      "Name": "adminjst - Exchange",
+      "LastModified": "2016-08-30 09:38:24Z"
+    },
+    {
+      "Username": "admin@icepoweras.onmicrosoft.com",
+      "Password": null,
+      "Name": "IceAdminO365",
+      "LastModified": "2016-10-27 14:48:16Z"
+    }
+  ],
+  "Connection": [
+    {
+      "ValueFields": {
+        "ApplicationId": "0cec4662-9137-4526-a57e-e351cb5540e9",
+        "TenantId": "c8399d6d-f345-424d-b58c-526612a63f03",
+        "CertificateThumbprint": "7D1563695FA4E7F67AF4E3E49517B155A503A7E1",
+        "SubscriptionId": "2d83a567-d8b1-4b85-bbde-a084a2b1e1e1"
+      },
+      "ConnectionType": "AzureServicePrincipal",
+      "Name": "AzureRunAsConnection",
+      "LastModified": "2016-05-26 11:20:34Z"
+    }
+  ],
+  "Variable": [
+    {
+      "Value": null,
+      "Encrypted": true,
+      "Name": "Microsoft.Azure.Automation.SourceControl.OAuthToken",
+      "LastModified": "2016-05-26 11:21:09Z"
+    }
+  ],
+  "Certificate": []
+}

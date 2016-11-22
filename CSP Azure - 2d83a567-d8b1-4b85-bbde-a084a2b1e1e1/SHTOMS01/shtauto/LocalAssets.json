@@ -1,0 +1,22 @@
+{
+  "Variable": [
+    {
+      "Value": "{\"Branch\":\"master\",\"RunbookFolderPath\":\"/AzureAutomation\",\"ProviderType\":1,\"Repository\":\"Powershell-scripts\",\"Username\":\"mhmsh\"}",
+      "Encrypted": false,
+      "Name": "Microsoft.Azure.Automation.SourceControl.Connection",
+      "LastModified": "2016-05-26 11:23:35Z"
+    }
+  ],
+  "Certificate": [
+    {
+      "ValueFields": null,
+      "Thumbprint": "7D1563695FA4E7F67AF4E3E49517B155A503A7E1",
+      "CertPath": null,
+      "Password": null,
+      "Exportable": true,
+      "Encrypted": false,
+      "Name": "AzureRunAsCertificate",
+      "LastModified": "2016-05-26 11:20:33Z"
+    }
+  ]
+}
