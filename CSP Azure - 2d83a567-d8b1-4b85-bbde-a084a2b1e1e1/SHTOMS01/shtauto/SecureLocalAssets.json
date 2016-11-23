@@ -1,12 +1,6 @@
 {
   "PSCredential": [
     {
-      "Username": "adminjst@corp.systemhosting.dk",
-      "Password": null,
-      "Name": "adminjst",
-      "LastModified": "2016-06-07 09:50:11Z"
-    },
-    {
       "Username": "exchange\\adminjst",
       "Password": null,
       "Name": "adminjst - Exchange",
@@ -17,6 +11,12 @@
       "Password": null,
       "Name": "IceAdminO365",
       "LastModified": "2016-10-27 14:48:16Z"
+    },
+    {
+      "Username": "adminjst@corp.systemhosting.dk",
+      "Password": null,
+      "Name": "adminjst",
+      "LastModified": "2016-06-07 09:50:11Z"
     }
   ],
   "Connection": [

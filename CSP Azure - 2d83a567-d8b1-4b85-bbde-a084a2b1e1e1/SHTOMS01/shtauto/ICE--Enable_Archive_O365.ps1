@@ -8,9 +8,9 @@ try{
                              -AllowRedirection `
                              -Name 'Exchange'
     Import-Module (Import-PSSession -Session $Session `
-                                    -AllowClobber `
-                                    -DisableNameChecking `
-                                    -CommandName Get-Mailbox, Enable-Mailbox, Set-Mailbox, Get-Group) -Global
+                             -AllowClobber `
+                             -DisableNameChecking `
+                             -CommandName Get-Mailbox, Enable-Mailbox, Set-Mailbox, Get-Group) -Global
 
     }catch{
            Write-Output "failed exchange connection.."
