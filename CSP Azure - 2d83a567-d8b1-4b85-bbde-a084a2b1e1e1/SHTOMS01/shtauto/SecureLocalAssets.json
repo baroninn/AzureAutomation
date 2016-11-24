@@ -17,6 +17,12 @@
       "Password": null,
       "Name": "adminjst",
       "LastModified": "2016-06-07 09:50:11Z"
+    },
+    {
+      "Username": "CAPTO\\SVC_CPO_AzureAutomat",
+      "Password": "Xjvjw/xF/6E/ExDUuQCazy50XC2+nMJjHOBj5bXYXvTfUT+NfbZoFI8m8j1qta1O1yih6WavQ6/XPsZl6Kt53jpngo2qkZL6oY5Ndzo56nMQVSslf2w/C6qivUVjJYKNZUsukbKlNaw/S9p7O7a/7moovx3dcS/BtVel+gYk3+/zgqQSFUPzb9bERD2kvxzq4zyzAsXGBlQEoRjh5xJy8dUbdvKjJA1ne2k6H1guvho/lgI4r/9s2CfUDbLSalZlVGwV5caXFr7WKb6c1BPi7mL4tTzLVrDim5jwmU6W6DMQlBQvP+TqLBQ63+GA0/M7uRS9IImDSFm1HjvPKhqJyQ==",
+      "Name": "SVC_CPO_AzureAutomation",
+      "LastModified": "2016-11-24 10:45:45Z"
     }
   ],
   "Connection": [
