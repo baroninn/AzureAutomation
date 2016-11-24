@@ -11,7 +11,7 @@
 
 
 
-$cred = Get-AutomationPSCredential -Name 'adminjst - Exchange'
+$cred = Get-AutomationPSCredential -Name "EXCHANGE--SVC_AzureAutomation"
 
 
 # Import Module 

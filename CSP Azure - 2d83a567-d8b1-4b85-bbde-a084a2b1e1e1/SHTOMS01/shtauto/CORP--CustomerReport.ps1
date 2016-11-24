@@ -12,7 +12,7 @@
 # Import modules and global variables
 $ErrorActionPreference = 'stop'
 $VMMHost               = 'vmm-a.corp.systemhosting.dk'
-#Get-AutomationPSCredential -Name "adminjst"
+#Get-AutomationPSCredential -Name "CORP--SVC_AzureAutomation"
 
 Import-Module ActiveDirectory -Global
 Import-Module GroupPolicy -Global

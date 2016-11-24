@@ -20,7 +20,7 @@ function Log([array]$text) {
 
 $ErrorActionPreference = 'stop'
 
-$cred = Get-AutomationPSCredential -Name 'adminjst - Exchange'
+$cred = Get-AutomationPSCredential -Name "EXCHANGE--SVC_AzureAutomation"
 $Contacts = "\\exch023C1CAS\c$\contacts.pst"
 # $VerbosePreference='Continue'
 

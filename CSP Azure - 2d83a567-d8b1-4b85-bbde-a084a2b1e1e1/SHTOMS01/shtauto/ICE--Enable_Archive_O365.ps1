@@ -1,4 +1,4 @@
-﻿$cred = Get-AutomationPSCredential -Name "IceAdminO365"
+﻿$cred = Get-AutomationPSCredential -Name "ICE--Ice_Admin_O365"
 
 try{
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange `

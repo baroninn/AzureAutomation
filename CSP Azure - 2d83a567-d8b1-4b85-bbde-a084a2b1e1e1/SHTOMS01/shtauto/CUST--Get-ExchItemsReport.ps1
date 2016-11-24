@@ -19,7 +19,7 @@ function Log([array]$text) {
 }
 $Mail = 'nds@systemhosting.dk'
 $ErrorActionPreference = 'stop'
-$cred = Get-AutomationPSCredential -Name 'adminjst - Exchange'
+$cred = Get-AutomationPSCredential -Name "EXCHANGE--SVC_AzureAutomation"
 
 #  Get Organization, only used when run manually.
 #$Organisation = Read-Host "Customer initials.. (Leave blank for full report)" 

@@ -11,8 +11,8 @@
 
 #>
 
-$cred = Get-AutomationPSCredential -Name 'adminjst'
-# Import Module 
+$cred = Get-AutomationPSCredential -Name "EXCHANGE--SVC_AzureAutomation"
+# Import Modules
 Import-Module ActiveDirectory
 Import-Module GroupPolicy
 

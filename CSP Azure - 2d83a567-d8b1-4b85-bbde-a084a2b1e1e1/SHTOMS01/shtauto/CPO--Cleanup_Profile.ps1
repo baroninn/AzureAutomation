@@ -4,7 +4,7 @@ V1.0 by Jakob Strøm - 24-11-2016
 #>
 
 ## Global variables
-$cred = Get-AutomationPSCredential -Name "SVC_CPO_AzureAutomation"
+$cred = Get-AutomationPSCredential -Name "CPO--SVC_CPO_AzureAutomation"
 Import-Module ActiveDirectory
 $ErrorActionPreference = 'stop'
 

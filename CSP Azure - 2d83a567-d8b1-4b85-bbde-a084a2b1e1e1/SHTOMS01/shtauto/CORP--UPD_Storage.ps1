@@ -8,7 +8,7 @@
 # IMPORTANT! Run the script from CORP!!
 # 
 
-$cred   = Get-AutomationPSCredential -Name "adminjst"
+$cred   = Get-AutomationPSCredential -Name "CORP--SVC_AzureAutomation"
 $ExchAD = 'AD024C1EXCHGC.exchange.systemhosting.local'
 $CorpAD = 'dc-03.corp.systemhosting.dk'
 $mail   = @("jst@systemhosting.dk", "supporten@systemhosting.dk")

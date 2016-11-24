@@ -1,28 +1,28 @@
 {
   "PSCredential": [
     {
-      "Username": "exchange\\adminjst",
-      "Password": null,
-      "Name": "adminjst - Exchange",
-      "LastModified": "2016-08-30 09:38:24Z"
-    },
-    {
       "Username": "admin@icepoweras.onmicrosoft.com",
-      "Password": null,
-      "Name": "IceAdminO365",
-      "LastModified": "2016-10-27 14:48:16Z"
+      "Password": "NN99S+wtI+kQSO3ffcyQeqT2nRiA5ygCBEus02cFuX52T3mNHmwEIPnkmr2U+oApZuzENPjOcEjconB1If/RVnVecdJ9/nfFwOFLCRe4/A6hCvOQpksW5rU26CBjktdGlw+1VKIGJeq5/nXX0ZpgKVou+oITXFvCbmkfNwwldj4UoRryl/OpGB3zwnQWrI90d1RtdPzE2TQpvzUOMvBW0FRAMhCUj9thpiHYOhr0tHU2I6aTmcOEVk99DfP10g4r1lACzvyVIWRUVhPo/vSBicyvpXwDt0feYNnbINE3F9flpd3vylZoz0inq6/9yAYTUHCyb5r+WCaL55K4u0Gn4w==",
+      "Name": "ICE--Ice_Admin_O365",
+      "LastModified": "2016-11-24 16:16:11Z"
     },
     {
-      "Username": "adminjst@corp.systemhosting.dk",
-      "Password": null,
-      "Name": "adminjst",
-      "LastModified": "2016-06-07 09:50:11Z"
+      "Username": "EXCHANGE\\SVC_AzureAutomation",
+      "Password": "e0GH0vQ/MK/BXCy1GazNRjSgiAs/nkzoXlutl/avxJSHdMzWNEeyPhp9vUibrkhcCSA9cWFh9CQmUTqyA5EFt2etDfzgP3VS7I2RZXywQkr3mQz8wpALNoMBgT41iLy05jLXxVP2xsdvhcPAa4YN2Cv2haqJ4u4lMJYHLl3Z/shRQt3AvUM5iWtj+f/wTmmXU/Shg+Fv16Z51FfmwjD+ce2s6ET2KyEQujNOEvQoJa8KQ61h7X8Nte5gmK2ESFE83SkSsmZSlvYe0E+COWTI/7T1LJRxtp5V+Ye+b+AKgVixGUQTdDjTzh2DsvTPzJ/SFBIqDZWPMyvjkXOiPwCE/A==",
+      "Name": "EXCHANGE--SVC_AzureAutomation",
+      "LastModified": "2016-11-24 16:16:18Z"
     },
     {
       "Username": "CAPTO\\SVC_CPO_AzureAutomat",
-      "Password": "Xjvjw/xF/6E/ExDUuQCazy50XC2+nMJjHOBj5bXYXvTfUT+NfbZoFI8m8j1qta1O1yih6WavQ6/XPsZl6Kt53jpngo2qkZL6oY5Ndzo56nMQVSslf2w/C6qivUVjJYKNZUsukbKlNaw/S9p7O7a/7moovx3dcS/BtVel+gYk3+/zgqQSFUPzb9bERD2kvxzq4zyzAsXGBlQEoRjh5xJy8dUbdvKjJA1ne2k6H1guvho/lgI4r/9s2CfUDbLSalZlVGwV5caXFr7WKb6c1BPi7mL4tTzLVrDim5jwmU6W6DMQlBQvP+TqLBQ63+GA0/M7uRS9IImDSFm1HjvPKhqJyQ==",
-      "Name": "SVC_CPO_AzureAutomation",
-      "LastModified": "2016-11-24 10:45:45Z"
+      "Password": "fjr6mtBlTMjknL5JDbIiSlNbAhFMC06Ep/6jUwWjG8SxkpEkevlAHmTklI4LlEL+CYUla6L1zMu5chnh4ARcnNrNQ5xwuyNM2eDJ2YbbUh8QFt/JaMhS9v4rYSjWlzqiXw0faoFWknU0faF+AKSIgYQRjTFFdIOz4K4JhYZW5jlL9axSkxpVINOjkfxEOWI7sSLv5+y+5GJveqxgUuZ7yuuZTYKa0bZXJn+HfUAio6JeMpPnO13cv4xUl07+x2JNIjHOoHCj9jA6cHl8uuCtrN8ek3UbWO+XiIOXENjQjzVSWzDxjXcKmhpgTZ6+st3hukLquPr+eybHEIfJc1VIbg==",
+      "Name": "CPO--SVC_CPO_AzureAutomation",
+      "LastModified": "2016-11-24 16:16:23Z"
+    },
+    {
+      "Username": "CORP\\SVC_AzureAutomation",
+      "Password": "HZBx870lo3WK7s+Zp+CjjlR22cxke8EkNVgR8CGbx+hLuUA2mW+rKTOK+YLtO2vNTzVWnpKeYtnqPYzHw7e2mj2fC2a9/POjIe47lwvKcmaqLb+T39Mp4V8FoQ5J4Mr2KtGz8LcmmaOhZoJR65UfgYSjv2Kb9vja7HIfx7bb7h77S8tyx8BF9zMcMgt6zvaa4ezfpmba8y0NyFlRBfP6RRuwBMi9bK26zg0C2BNPnZY8CPADIyJ9PdGHRwh9l/6vEj0ZPIt16UHR6YaNSTlI+avumkaKqq3U6varwjg72CfG/BG6OsED8t7ZJCLrIbE9i50bUF2KlUjbTIz+2z4Oxw==",
+      "Name": "CORP--SVC_AzureAutomation",
+      "LastModified": "2016-11-24 16:16:27Z"
     }
   ],
   "Connection": [

@@ -18,7 +18,7 @@ $ServerName    = ConvertFrom-JSON -InputObject $WebHookBody
 
 Write-Output ($ServerName + " Test write-out")
 
-$cred = Get-AutomationPSCredential -Name 'adminjst'
+$cred = Get-AutomationPSCredential -Name "CORP--SVC_AzureAutomation"
 
     $scriptBlock = {
         param( 
