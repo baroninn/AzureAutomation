@@ -16,7 +16,7 @@ $VMMHost               = 'vmm-a.corp.systemhosting.dk'
 
 Import-Module ActiveDirectory -Global
 Import-Module GroupPolicy -Global
-Import-Module virtualmachinemanager -Cmdlet "Get-SCCloud", "Get-VM" -Global
+Import-Module virtualmachinemanager -Cmdlet "Get-SCCloud", "Get-VM" -Global -ErrorAction SilentlyContinue
 
 $customers=@()
 $ICE = New-Object PSObject
@@ -31,17 +31,21 @@ $PRV = New-Object PSObject
 $SGC = New-Object PSObject
        Add-Member -InputObject $SGC -MemberType NoteProperty -Name Customer -Value 'SGC'
        Add-Member -InputObject $SGC -MemberType NoteProperty -Name Domain -Value 'corp.thescandinavian.dk'
+$ASG = New-Object PSObject
+       Add-Member -InputObject $ASG -MemberType NoteProperty -Name Customer -Value 'ASG'
+       Add-Member -InputObject $ASG -MemberType NoteProperty -Name Domain -Value 'asgdom.local'
 
-$customers += $ICE, $BOH, $PRV, $SGC
+$customers += $ICE, $BOH, $PRV, $SGC, $ASG
 # Test single customer
-# $customers += $SGC
+#$customers += $ASG
 
 foreach($i in $customers){
 
     ## Customer specific variables
     $Customer     = $i.Customer
     $Domain       = $i.Domain
-    $Domdc        = (($Customer) + "-dc-01." + ($Domain))
+    if($Customer -eq 'ASG'){$Domdc = (($Customer) + "-dc01." + ($Domain))}else{
+    $Domdc        = (($Customer) + "-dc-01." + ($Domain))}
     $Account      = ("SVC_" + "$Customer" + "_CustomerReport@" + "$Domain")
     $SVC_Password = 'ijhu45%¤/2D42!"v87¤g3¤%&rd¤'
     $SVC_secPass  = ConvertTo-SecureString -String $SVC_Password -AsPlainText -Force
@@ -56,8 +60,8 @@ foreach($i in $customers){
     }
     Write-Output ("Getting ADdomain for customer " + $customer)
     try{
-        $domdn  = Get-ADDomain -Server (($Customer) + "-dc-01." + ($Domain)) -Credential $cred | select -expandproperty DistinguishedName
-        $domUPN = Get-ADDomain -Server (($Customer) + "-dc-01." + ($Domain)) -Credential $cred | select -ExpandProperty Forest
+        $domdn  = Get-ADDomain -Server $Domdc -Credential $cred | select -ExpandProperty DistinguishedName
+        $domUPN = Get-ADDomain -Server $Domdc -Credential $cred | select -ExpandProperty Forest
 
         $Cloud  = Get-SCCloud -VMMServer $VMMHost | where{$_.Name -like "$Customer*"}
         $VMs    = Get-VM -VMMServer $VMMHost -Cloud $Cloud | where {$_.Status -eq "Running" -and $_.Name -notlike "*mpgw*"}
@@ -69,7 +73,7 @@ foreach($i in $customers){
     ## Mail settings
     #$SMTP     = (($customer) + "-exch-01." + ($domUPN)) <- Deleted as we are sending from Corp (relay.systemhosting.dk)
     $SMTPFrom = ("SHReport@" + $domUPN)
-    $SMTPTo   = "jst@systemhosting.dk"
+    $SMTPTo   = "ahf@systemhosting.dk" ## Emails can be seperated by ,  "@","@","@"
 
     ## Generate HTML Table styles
     $style = "<style>BODY{font-family: Arial; font-size: 10pt;}"
@@ -80,7 +84,8 @@ foreach($i in $customers){
 
     ## Import remote Exchange session
     try{
-        $Mailsession = New-PSSession -Name Microsoft.Exchange -ConnectionUri ("http://" + $customer + "-EXCH-01." + $domUPN + "/powershell") -ConfigurationName Microsoft.Exchange -Credential $cred
+        if($Customer -eq 'ASG'){$Mailsession = New-PSSession -Name Microsoft.Exchange -ConnectionUri ("http://" + $customer + "-EXCH01." + $domUPN + "/powershell") -ConfigurationName Microsoft.Exchange -Credential $cred}else{
+        $Mailsession = New-PSSession -Name Microsoft.Exchange -ConnectionUri ("http://" + $customer + "-EXCH-01." + $domUPN + "/powershell") -ConfigurationName Microsoft.Exchange -Credential $cred}
         Import-PSSession $Mailsession -AllowClobber -CommandName Get-Mailbox, Get-MailboxStatistics
         }catch{
         Write-Output ($customer + " Mail server not accessible")
@@ -308,7 +313,8 @@ foreach($i in $customers){
     Send-MailMessage -SmtpServer "relay.systemhosting.dk" `
                      -BodyAsHtml `
                      -From "SHReport@systemhosting.dk" `
-                     -To "$SMTPTo" `
+                     -To $SMTPTo `
+                     -Cc "jst@systemhosting.dk" `
                      -Body (("$StatsReport")  + 
                            ("FULL Users : " + $FullUsers.count + $FullUsersreport) +  
                            ("LIGHT Users :" + $LightUsers.count + $LightUsersreport) + 
