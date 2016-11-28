@@ -8,7 +8,7 @@ $cred = Get-AutomationPSCredential -Name "CPO--SVC_CPO_AzureAutomation"
 Import-Module ActiveDirectory
 $ErrorActionPreference = 'stop'
 
-$debug              = $null
+$debug              = $True
 $Profiles           = '\\capto\data\uev_profiles'
 $DC                 = 'CPO-AD-01.hosting.capto.dk'
 $CustomerOU         = 'OU=Customer,OU=SYSTEMHOSTING,DC=hosting,DC=capto,DC=dk'
@@ -34,6 +34,7 @@ Log ([string]($Users).Count + " users found. Starting compute")
 
 foreach($i in $users){
     try{
+        $UPMExist = $null
         $UPMPath  = ($i.SamAccountName + ".V2")
         $UPMExist = Get-ChildItem ($PSDriveLetter + $UPMPath)
         }catch{
@@ -42,7 +43,7 @@ foreach($i in $users){
                LOG ("User " + $i.SamAccountName + " doesn't seem to have a UPM profile")
                }
         }
-    if($UPMExist){
+    if(!($UPMExist -like $null)){
         try{
             $Cache      = ($PSDriveLetter + $i.SamAccountName + ".v2\UPM_Profile\AppData\Local\Google\Chrome\User Data\Default\Cache")
             Get-ChildItem $Cache | Remove-Item -Recurse -Force
